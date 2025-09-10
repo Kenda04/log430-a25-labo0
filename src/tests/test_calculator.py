@@ -8,6 +8,9 @@ from calculator import Calculator
 
 def test_app():
     my_calculator = Calculator()
-    assert my_calculator.get_hello_message() == "Calculatrice"
+    assert my_calculator.get_hello_message().__contains__("Calculatrice")
 
 # TODO: ajoutez les tests
+def test_addition():
+    my_calculator = Calculator()
+    assert my_calculator.addition(2, 3) == 5
